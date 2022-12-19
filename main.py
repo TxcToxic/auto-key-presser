@@ -15,10 +15,7 @@ def press_key(key, timeout, log: bool = False):
             if log:
                 key_presses += 1
                 print(f" [+] Pressed {key} | {key_presses}")
-            if "." in timeout:
-                time.sleep(float(timeout))
-            else:
-                time.sleep(int(timeout))
+            time.sleep(float(timeout))
         except KeyboardInterrupt:
             return
 
